@@ -1,27 +1,22 @@
 import * as SplashScreen from "expo-splash-screen";
-import {StyleSheet, View, Text} from "react-native";
+import { StyleSheet, View } from "react-native";
 import "react-native-reanimated";
-
+import StartGameScreen from "@/screens/StartGameScreen";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   return (
-      <View>
-        <Text>sdfs</Text>
-      </View>
+    <View style={styles.rootScreen}>
+      <StartGameScreen />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  appConstainer: {
+  rootScreen: {
     flex: 1,
-    paddingTop: 50,
-    paddingHorizontal: 16,
-  },
-
-  goalsContainer: {
-    flex: 5,
+    backgroundColor: "#ddb52f",
   },
 });
